@@ -1,0 +1,24 @@
+.FeedSection {
+  margin-top: 60px;
+  .content {
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        font-size: clamp(10px, 3vw, 24px);
+        font-weight: 600;
+      }
+      a {
+        font-size: clamp(8px, 3vw, 16px);
+        color: rgb(75, 68, 211);
+      }
+    }
+    .cards {
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}
