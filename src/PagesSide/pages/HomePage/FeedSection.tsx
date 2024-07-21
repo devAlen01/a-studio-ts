@@ -23,7 +23,7 @@ const FeedSection = () => {
                   image={el.title?.posters.original.url}
                   title={el.title?.names.ru}
                   code={el.title?.code}
-                  genres={el?.title?.genres?.map((el) => el)}
+                  genres={el?.title?.genres}
                 />
               ))}
           </div>

@@ -35,13 +35,14 @@
       font-size: clamp(2px, 2vw, 12px);
       color: rgb(127, 124, 124);
       display: -webkit-box;
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
-      span {
-        margin: 0 5px;
-      }
+      // span {
+      //   width: 235px;
+      //   padding: 0 3px;
+      // }
     }
   }
 }

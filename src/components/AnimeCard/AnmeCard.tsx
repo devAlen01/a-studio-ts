@@ -26,7 +26,9 @@ const AnimeCard = ({ code, image, title, genres }: AnimeCardProps) => {
           <div className={scss.title}>
             <h4 className={scss.name}>{title}</h4>
             <div className={scss.genre}>
-              <span>{genres}</span>
+              {genres?.map((el, index) => (
+                <span key={index}> {el} </span>
+              ))}
             </div>
           </div>
         </div>
