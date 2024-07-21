@@ -32,6 +32,22 @@ interface Poster {
   };
 }
 
+interface Hls {
+  fhd: string;
+  hd: string;
+  sd: string;
+}
+
+interface List2 {
+  episode: number;
+  name?: string;
+  uuid: string;
+  created_timestamp: number;
+  preview: string;
+  skips: Skips;
+  hls: Hls;
+}
+
 interface Player {
   alternative_player: null;
   host: string;
@@ -41,25 +57,8 @@ interface Player {
     last: number;
     string: string;
   };
-  list: Record<
-    string,
-    {
-      episode: number;
-      name: string;
-      uuid: string;
-      created_timestamp: number;
-      preview: string;
-      skips: {
-        opening: number[];
-        ending: number[];
-      };
-      hls: {
-        fhd: string;
-        hd: string;
-        sd: string;
-      };
-    }
-  >;
+  list: List2[];
+
   rutube: {};
 }
 

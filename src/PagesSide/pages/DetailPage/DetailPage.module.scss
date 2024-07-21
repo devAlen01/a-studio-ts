@@ -1,0 +1,105 @@
+.DetailPage {
+  margin: 40px 0;
+  .content {
+    display: flex;
+    align-items: center;
+    .description {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      .image {
+        img {
+          max-width: clamp(200px, 35vw, 400px);
+          border-radius: 4px;
+        }
+      }
+      .season_type {
+        color: rgb(142, 141, 140);
+        font-size: clamp(12px, 2vw, 16px);
+      }
+    }
+    .anime_video {
+      padding: 0 20px;
+      .episode_quality {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-inline: auto;
+        max-width: 700px;
+        select {
+          background-color: rgb(75, 68, 211);
+          font-size: clamp(6px, 2vw, 18px);
+          padding: 6px 25px;
+          border-radius: 3px;
+          color: rgb(192, 203, 212);
+          border: none;
+          outline: none;
+          option {
+            font-weight: 400;
+            color: rgb(192, 203, 212);
+          }
+        }
+      }
+      .player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .play {
+          width: clamp(350px, 50vw, 700px);
+        }
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        .title {
+          h3 {
+            font-size: clamp(10px, 2vw, 22px);
+            font-weight: 500;
+          }
+          h5 {
+            font-size: clamp(6px, 2vw, 12px);
+            font-weight: 400;
+          }
+        }
+      }
+      p {
+        margin-top: 20px;
+        font-size: clamp(9px, 3vw, 17px);
+        font-weight: 200;
+        text-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .DetailPage {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .description {
+        .image {
+          img {
+            max-width: 700px;
+            border-radius: 4px;
+          }
+        }
+      }
+      .anime_video {
+        .episode_quality {
+          select {
+            padding: 5px 8px;
+          }
+        }
+      }
+    }
+  }
+}

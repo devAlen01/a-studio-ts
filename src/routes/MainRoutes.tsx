@@ -3,6 +3,7 @@ import SchedulePage from "../PagesSide/pages/SchedulePage/SchedulePage";
 import TeamPage from "../PagesSide/pages/TeamPage/TeamPage";
 import CatalogPage from "../PagesSide/pages/CatalogPage/CatalogPage";
 import HomePage from "../PagesSide/pages/HomePage/HomePage";
+import DetailPage from "../PagesSide/pages/DetailPage/DetailPage";
 
 const MainRoutes = () => {
   const PUBLIC = [
@@ -25,6 +26,11 @@ const MainRoutes = () => {
       id: 3,
       link: "/catalog",
       element: <CatalogPage />,
+    },
+    {
+      id: 4,
+      link: "/oneTitle/:code",
+      element: <DetailPage />,
     },
   ];
   return (

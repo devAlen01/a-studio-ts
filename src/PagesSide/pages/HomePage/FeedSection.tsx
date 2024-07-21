@@ -13,7 +13,7 @@ const FeedSection = () => {
         <div className={scss.content}>
           <div className={scss.text}>
             <h2>Последние релизы</h2>
-            <Link to={"#"}>Что еще посмотреть?</Link>
+            <Link to="#">Что еще посмотреть?</Link>
           </div>
           <div className={scss.cards}>
             {feed &&

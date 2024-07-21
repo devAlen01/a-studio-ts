@@ -13,9 +13,9 @@ const api = index.injectEndpoints({
       }),
       providesTags: ["anime"],
     }),
-    getOneAnime: builder.query<AnimeData, number>({
-      query: (id) => ({
-        url: `title?id=${id}`,
+    getOneAnime: builder.query<AnimeData, string>({
+      query: (code) => ({
+        url: `title?code=${code}`,
         method: "GET",
       }),
       providesTags: ["anime"],

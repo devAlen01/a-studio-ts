@@ -1,15 +1,20 @@
 import { FC } from "react";
 import scss from "./AnmeCard.module.scss";
-const IMG_API = "https://static-libria.weekstorm.one";
+import { useNavigate } from "react-router-dom";
+const IMG_HOST = "https://static-libria.weekstorm.one";
 
 const AnimeCard: FC<FeedAnime> = ({ title }) => {
+  const navigate = useNavigate();
   return (
     <>
       {title !== undefined ? (
-        <div className={scss.AnimeCard}>
+        <div
+          onClick={() => navigate(`/oneTitle/${title?.code}`)}
+          className={scss.AnimeCard}
+        >
           <div className={scss.image}>
             <img
-              src={`${IMG_API}/${title?.posters?.original?.url}`}
+              src={`${IMG_HOST}/${title?.posters?.original?.url}`}
               alt="anime"
             />
           </div>
