@@ -18,7 +18,13 @@ const FeedSection = () => {
           <div className={scss.cards}>
             {feed &&
               feed?.list?.map((el, index) => (
-                <AnimeCard key={el?.title?.id || index} {...el} />
+                <AnimeCard
+                  key={el?.title?.id || index}
+                  image={el.title?.posters.original.url}
+                  title={el.title?.names.ru}
+                  code={el.title?.code}
+                  genres={el?.title?.genres?.map((el) => el)}
+                />
               ))}
           </div>
         </div>

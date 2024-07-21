@@ -1,0 +1,29 @@
+.BurgerMenu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 1px;
+  top: 50px;
+  width: 100%;
+  background: rgb(0, 0, 7);
+  transition: 0.3s;
+  z-index: 20;
+  .content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    a {
+      color: rgb(154, 152, 164);
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+  }
+}

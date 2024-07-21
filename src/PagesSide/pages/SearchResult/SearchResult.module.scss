@@ -1,0 +1,17 @@
+.SearchResult {
+  margin-top: 60px;
+  .content {
+    .text {
+      h2 {
+        font-size: clamp(10px, 3vw, 24px);
+        font-weight: 600;
+      }
+    }
+    .cards {
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}

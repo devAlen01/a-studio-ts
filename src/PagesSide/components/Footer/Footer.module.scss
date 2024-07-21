@@ -1,5 +1,5 @@
 .Footer {
-  padding: 20px 0 25px 0;
+  padding: 20px 0;
   .line {
     max-width: 100%;
     border: 0.6px solid rgb(53, 52, 52);
@@ -24,7 +24,7 @@
       align-items: center;
       justify-content: center;
       p {
-        font-size: clamp(12px, 3vw, 20px);
+        font-size: clamp(6px, 2vw, 20px);
       }
       span {
         padding: 0 4px;
@@ -32,7 +32,7 @@
         align-items: center;
         justify-content: center;
         color: red;
-        font-size: clamp(12px, 3vw, 22px);
+        font-size: clamp(9px, 2vw, 22px);
       }
     }
   }

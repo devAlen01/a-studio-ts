@@ -30,8 +30,21 @@ const api = index.injectEndpoints({
       }),
       providesTags: ["anime"],
     }),
+    searchAnime: builder.query<AnimeList, string>({
+      query: (value) => ({
+        url: `title/search?search=${value}`,
+        params: {
+          limit: 15,
+        },
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetAnimeListQuery, useGetOneAnimeQuery, useGetFeedQuery } =
-  api;
+export const {
+  useGetAnimeListQuery,
+  useGetOneAnimeQuery,
+  useGetFeedQuery,
+  useSearchAnimeQuery,
+} = api;

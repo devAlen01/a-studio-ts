@@ -159,6 +159,7 @@ interface AnimeData {
 
 interface FeedAnime {
   title: AnimeData;
+  el: AnimeData;
 }
 interface Pagination {
   pages: number;

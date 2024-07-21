@@ -1,29 +1,32 @@
-import { FC } from "react";
 import scss from "./AnmeCard.module.scss";
 import { useNavigate } from "react-router-dom";
 const IMG_HOST = "https://static-libria.weekstorm.one";
 
-const AnimeCard: FC<FeedAnime> = ({ title }) => {
+interface AnimeCardProps {
+  image: string;
+  title: string;
+  code: string | undefined;
+  genres: string[];
+}
+
+const AnimeCard = ({ code, image, title, genres }: AnimeCardProps) => {
   const navigate = useNavigate();
+  console.log();
+
   return (
     <>
       {title !== undefined ? (
         <div
-          onClick={() => navigate(`/oneTitle/${title?.code}`)}
+          onClick={() => navigate(`/oneTitle/${code}`)}
           className={scss.AnimeCard}
         >
           <div className={scss.image}>
-            <img
-              src={`${IMG_HOST}/${title?.posters?.original?.url}`}
-              alt="anime"
-            />
+            <img src={`${IMG_HOST}/${image}`} alt="anime" />
           </div>
           <div className={scss.title}>
-            <h4 className={scss.name}>{title?.names?.ru}</h4>
+            <h4 className={scss.name}>{title}</h4>
             <div className={scss.genre}>
-              {title?.genres?.slice(0, 3).map((gen, index) => (
-                <span key={index}>{gen}</span>
-              ))}
+              <span>{genres}</span>
             </div>
           </div>
         </div>
