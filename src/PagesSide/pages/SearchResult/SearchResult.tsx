@@ -1,20 +1,47 @@
-import { useParams } from "react-router-dom";
-import { useSearchAnimeQuery } from "../../../redux/api/Anime";
+import { Link, useParams } from "react-router-dom";
 import Loader from "../../../components/Loader/Loader";
 import scss from "./SearchResult.module.scss";
 import AnimeCard from "../../../components/AnimeCard/AnmeCard";
+import apiAnime from "../../../redux/api/Anime";
 
 const SearchResult = () => {
   const { value } = useParams<string>();
-  const { data: result, isLoading } = useSearchAnimeQuery(value!);
-
-  if (isLoading || result?.list?.length! < 0) return <Loader />;
+  const { data: result, isLoading } = apiAnime.useSearchAnimeQuery(value!);
+  if (isLoading) return <Loader />;
   return (
     <section className={scss.SearchResult}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.text}>
-            <h2>Результаты поиска</h2>
+            {result?.list.length ? (
+              <h2>Результаты поиска</h2>
+            ) : (
+              <div
+                style={{
+                  fontSize: "clamp(10px, 3vw, 28px)",
+                  fontWeight: "600",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "22px",
+                  height: "70vh",
+                }}
+              >
+                <span>По вашему запросу ничего не найдено</span>
+                <Link
+                  style={{
+                    fontSize: "clamp(8px, 2vw, 16px)",
+                    fontWeight: "400",
+                    color: "purple",
+                    textDecoration: "underline",
+                  }}
+                  to="/"
+                >
+                  Перейти на главную страницу
+                </Link>
+              </div>
+            )}
           </div>
           <div className={scss.cards}>
             {result &&

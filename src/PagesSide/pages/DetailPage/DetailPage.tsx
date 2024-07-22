@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
 import scss from "./DetailPage.module.scss";
-import { useGetOneAnimeQuery } from "../../../redux/api/Anime";
 import ReactPlayer from "react-player/lazy";
 import Loader from "../../../components/Loader/Loader";
 import { useState } from "react";
+import apiAnime from "../../../redux/api/Anime";
 const IMG_HOST = "https://static-libria.weekstorm.one";
 const VIDEO_HOST = "https://cache.libria.fun";
 type videoQuality = "sd" | "hd" | "fhd";
 
 const DetailPage = () => {
   const { code } = useParams();
-  const { data: title, isLoading } = useGetOneAnimeQuery(code!);
+  const { data: title, isLoading } = apiAnime.useGetOneAnimeQuery(code!);
   const listEpisode = title!?.player?.list
     ? Object.values(title!?.player?.list)
     : [];

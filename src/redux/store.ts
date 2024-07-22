@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { api } from "./api";
+import animeSlice from "./features/animeSlice";
 
 const store = configureStore({
   reducer: {
+    animeSlice,
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) =>

@@ -1,4 +1,4 @@
-import { BaseQueryFn, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { BaseQueryFn, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { createApi } from "@reduxjs/toolkit/query/react";
 
 const url = "https://api.anilibria.tv/v3/";

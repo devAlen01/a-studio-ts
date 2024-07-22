@@ -93,10 +93,10 @@ const Header = () => {
                 ))}
               </nav>
             )}
-            <button className={scss.btn}>Войти</button>
           </div>
         </div>
       </div>
+      <button className={scss.btn}>Войти</button>
     </header>
   );
 };

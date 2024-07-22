@@ -1,13 +1,12 @@
-import { api as index } from "..";
+import { api } from "..";
 
-const api = index.injectEndpoints({
+const apiAnime = api.injectEndpoints({
   endpoints: (builder) => ({
     getAnimeList: builder.query<AnimeList, number>({
-      query: (activePage) => ({
-        url: "title/updates",
+      query: (itemPage) => ({
+        url: "title/changes",
         params: {
-          items_per_page: 20,
-          page: activePage,
+          items_per_page: itemPage,
         },
         method: "GET",
       }),
@@ -42,9 +41,4 @@ const api = index.injectEndpoints({
   }),
 });
 
-export const {
-  useGetAnimeListQuery,
-  useGetOneAnimeQuery,
-  useGetFeedQuery,
-  useSearchAnimeQuery,
-} = api;
+export default apiAnime;

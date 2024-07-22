@@ -29,6 +29,9 @@ importers:
       react-redux:
         specifier: ^9.1.2
         version: 9.1.2(@types/react@18.3.3)(react@18.3.1)(redux@5.0.1)
+      react-responsive-pagination:
+        specifier: ^2.6.1
+        version: 2.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-router-dom:
         specifier: ^6.25.1
         version: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -978,6 +981,12 @@ packages:
         optional: true
       redux:
         optional: true
+
+  react-responsive-pagination@2.6.1:
+    resolution: {integrity: sha512-NGrzvfFTPgnVdIPhWx8gGksZj6057LdkHm0WERHMxSOdj2pLRgc8+WxPCThKtBc6IANLf+BVDEBysqK1912VLA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   react-router-dom@6.25.1:
     resolution: {integrity: sha512-0tUDpbFvk35iv+N89dWNrJp+afLgd+y4VtorJZuOCXK0kkCWjEvb3vTJM++SYvMEpbVwXKf3FjeVveVEb6JpDQ==}
@@ -1978,6 +1987,12 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
       redux: 5.0.1
+
+  react-responsive-pagination@2.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

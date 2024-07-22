@@ -1,0 +1,41 @@
+.AnimeSection {
+  margin-top: 40px;
+  .content {
+    .text {
+      h2 {
+        font-size: clamp(10px, 3vw, 24px);
+        font-weight: 600;
+      }
+      h6 {
+        font-size: clamp(6px, 2vw, 14px);
+        color: rgb(75, 68, 211);
+        font-weight: 500;
+      }
+    }
+    .cards {
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .show_more {
+      text-align: center;
+      background-color: rgb(75, 68, 211);
+      border-radius: 5px;
+      transition: 0.6s;
+      &:hover {
+        background-color: rgb(167, 46, 197);
+        transition: 0.6s;
+      }
+      .btn {
+        font-weight: 600;
+        font-size: clamp(10px, 3vw, 16px);
+        color: #fff;
+        height: 40px;
+        width: 100%;
+        max-width: 1300px;
+        background-color: transparent;
+      }
+    }
+  }
+}

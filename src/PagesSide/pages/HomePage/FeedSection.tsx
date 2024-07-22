@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import AnimeCard from "../../../components/AnimeCard/AnmeCard";
-import { useGetFeedQuery } from "../../../redux/api/Anime";
 import scss from "./FeedSection.module.scss";
 import Loader from "../../../components/Loader/Loader";
+import apiAnime from "../../../redux/api/Anime";
 const FeedSection = () => {
-  const { data: feed, isLoading } = useGetFeedQuery();
+  const { data: feed, isLoading } = apiAnime.useGetFeedQuery();
 
   if (isLoading) return <Loader />;
   return (

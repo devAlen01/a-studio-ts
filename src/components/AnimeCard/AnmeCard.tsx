@@ -1,5 +1,7 @@
 import scss from "./AnmeCard.module.scss";
 import { useNavigate } from "react-router-dom";
+import posterE from "../../assets/posterE.webp";
+import { FC } from "react";
 const IMG_HOST = "https://static-libria.weekstorm.one";
 
 interface AnimeCardProps {
@@ -9,9 +11,8 @@ interface AnimeCardProps {
   genres: string[];
 }
 
-const AnimeCard = ({ code, image, title, genres }: AnimeCardProps) => {
+const AnimeCard: FC<AnimeCardProps> = ({ code, image, title, genres }) => {
   const navigate = useNavigate();
-  console.log();
 
   return (
     <>
@@ -21,7 +22,11 @@ const AnimeCard = ({ code, image, title, genres }: AnimeCardProps) => {
           className={scss.AnimeCard}
         >
           <div className={scss.image}>
-            <img src={`${IMG_HOST}/${image}`} alt="anime" />
+            {image.length ? (
+              <img src={`${IMG_HOST}/${image}`} alt="anime" />
+            ) : (
+              <img src={posterE} alt="anime" />
+            )}
           </div>
           <div className={scss.title}>
             <h4 className={scss.name}>{title}</h4>
