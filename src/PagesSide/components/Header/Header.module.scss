@@ -20,8 +20,8 @@
 
     .search_input_logo {
       h3 {
-        font-size: clamp(10px, 3vw, 24px);
-        margin: 0 10px;
+        font-size: clamp(12px, 3vw, 24px);
+        margin-left: 15px;
       }
       display: flex;
       align-items: center;
@@ -48,7 +48,8 @@
         .icon {
           height: 26px;
           border-radius: 0 4px 4px 0;
-
+          border: none;
+          outline: none;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -90,13 +91,13 @@
     }
   }
   .btn {
-    width: 60px;
+    width: 55px;
     margin: 0 5px;
     height: 30px;
     border-radius: 7px;
     background-color: #b3414a;
     color: #fff;
     font-size: 15px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
