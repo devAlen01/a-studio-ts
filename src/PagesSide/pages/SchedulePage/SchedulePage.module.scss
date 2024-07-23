@@ -1,0 +1,29 @@
+.SchedulePage {
+  margin-top: 40px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      font-size: clamp(18px, 3vw, 25px);
+    }
+    .daysOfWeek {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        color: rgb(82, 25, 170);
+        font-size: clamp(15px, 3vw, 29px);
+        font-weight: 500;
+      }
+      .cards {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+    }
+  }
+}

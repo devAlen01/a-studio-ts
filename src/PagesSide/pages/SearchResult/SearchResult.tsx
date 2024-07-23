@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import Loader from "../../../components/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 import scss from "./SearchResult.module.scss";
-import AnimeCard from "../../../components/AnimeCard/AnmeCard";
+import AnimeCard from "../../components/AnimeCard/AnmeCard";
 import apiAnime from "../../../redux/api/Anime";
 
 const SearchResult = () => {

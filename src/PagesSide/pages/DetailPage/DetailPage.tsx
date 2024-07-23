@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import scss from "./DetailPage.module.scss";
 import ReactPlayer from "react-player/lazy";
-import Loader from "../../../components/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 import { useState } from "react";
 import apiAnime from "../../../redux/api/Anime";
 const IMG_HOST = "https://static-libria.weekstorm.one";
@@ -17,7 +17,8 @@ const DetailPage = () => {
   const [activeEpisode, setActiveEpisode] = useState(1);
   const [videoQuality, setVideoQuality] = useState<videoQuality>("hd");
 
-  if (isLoading) return <Loader />;
+  if (isLoading)
+    return <Loader height={"100px"} width={"100px"} heightComp={"70vh"} />;
 
   return (
     <section className={scss.DetailPage}>

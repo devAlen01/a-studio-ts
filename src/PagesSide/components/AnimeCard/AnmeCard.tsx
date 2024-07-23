@@ -1,6 +1,6 @@
 import scss from "./AnmeCard.module.scss";
 import { useNavigate } from "react-router-dom";
-import posterE from "../../assets/posterE.webp";
+import posterE from "../../../assets/posterE.webp";
 import { FC } from "react";
 const IMG_HOST = "https://static-libria.weekstorm.one";
 

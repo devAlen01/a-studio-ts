@@ -5,7 +5,7 @@ type initialStateType = {
 };
 
 const initialState: initialStateType = {
-  itemPage: 20,
+  itemPage: 25,
 };
 
 const animeSlice = createSlice({

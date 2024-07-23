@@ -161,6 +161,7 @@ interface FeedAnime {
   title: AnimeData;
   el: AnimeData;
 }
+
 interface Pagination {
   pages: number;
   current_page: number;
@@ -172,8 +173,20 @@ interface AnimeFeedData {
   list: FeedAnime[];
 }
 
+interface ScheduleAnime {
+  day: number;
+  list: AnimeData[];
+}
+
+interface Team {
+  voice: string[];
+  translator: string[];
+  editing: string[];
+  decor: string[];
+  timing: [];
+}
+
 interface AnimeList {
-  day?: number;
   list: AnimeData[];
   pagination?: Pagination;
 }

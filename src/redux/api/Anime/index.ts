@@ -38,6 +38,18 @@ const apiAnime = api.injectEndpoints({
         method: "GET",
       }),
     }),
+    scheduleAnime: builder.query<ScheduleAnime[], void>({
+      query: () => ({
+        url: "title/schedule",
+        method: "GET",
+      }),
+    }),
+    getTeamList: builder.query<Team, void>({
+      query: () => ({
+        url: "team",
+        method: "GET",
+      }),
+    }),
   }),
 });
 

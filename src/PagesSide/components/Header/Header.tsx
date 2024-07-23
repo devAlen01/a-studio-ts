@@ -13,6 +13,10 @@ interface PagesT {
 const Header = () => {
   const pages: PagesT[] = [
     {
+      path: "/",
+      page: "Главная",
+    },
+    {
       path: "/schedule",
       page: "Расписание",
     },
