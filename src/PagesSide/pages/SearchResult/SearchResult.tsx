@@ -7,7 +7,8 @@ import apiAnime from "../../../redux/api/Anime";
 const SearchResult = () => {
   const { value } = useParams<string>();
   const { data: result, isLoading } = apiAnime.useSearchAnimeQuery(value!);
-  if (isLoading) return <Loader />;
+  if (isLoading)
+    return <Loader height={"100px"} width={"100px"} heightComp={"70vh"} />;
   return (
     <section className={scss.SearchResult}>
       <div className="container">
