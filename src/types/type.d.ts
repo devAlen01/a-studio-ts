@@ -190,3 +190,5 @@ interface AnimeList {
   list: AnimeData[];
   pagination?: Pagination;
 }
+
+// ?
