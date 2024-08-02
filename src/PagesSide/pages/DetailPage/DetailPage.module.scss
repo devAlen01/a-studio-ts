@@ -1,5 +1,5 @@
 .DetailPage {
-  margin: 40px 0;
+  margin: 10px 0;
   .content {
     display: flex;
     align-items: center;
@@ -9,10 +9,9 @@
       align-items: start;
       justify-content: center;
       flex-direction: column;
-      gap: 20px;
       .image {
         img {
-          max-width: clamp(200px, 35vw, 400px);
+          width: clamp(370px, 35vw, 420px);
           border-radius: 4px;
         }
       }
@@ -49,7 +48,7 @@
         align-items: center;
         justify-content: center;
         .play {
-          width: clamp(350px, 50vw, 700px);
+          width: clamp(350px, 50vw, 800px);
         }
       }
 
