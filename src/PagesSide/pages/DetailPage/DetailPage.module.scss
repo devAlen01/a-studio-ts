@@ -3,6 +3,7 @@
   .content {
     display: flex;
     align-items: center;
+    gap: 30px;
     .description {
       display: flex;
       align-items: start;
@@ -73,6 +74,20 @@
         font-size: clamp(9px, 3vw, 17px);
         font-weight: 200;
         text-wrap: wrap;
+      }
+    }
+    .error {
+      margin-top: 20px;
+      padding: 60px 30px;
+      background-color: rgba(115, 28, 28, 0.287);
+      border-radius: 12px;
+      h2 {
+        color: rgb(255, 0, 0);
+        font-weight: 500;
+        font-size: clamp(12px, 3vw, 26px);
+      }
+      p {
+        font-size: clamp(9px, 3vw, 18px);
       }
     }
   }

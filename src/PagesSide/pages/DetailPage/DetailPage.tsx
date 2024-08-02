@@ -97,7 +97,15 @@ const DetailPage = () => {
               </div>
               <p>{title?.description}</p>
             </div>
-          ) : null}
+          ) : (
+            <div className={scss.error}>
+              <h2>Контент заблокирован</h2>
+              <p>
+                К сожалению, медиа-контент заблокирован по запросу
+                правообладателей
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

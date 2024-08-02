@@ -4,7 +4,7 @@ const apiAnime = api.injectEndpoints({
   endpoints: (builder) => ({
     getAnimeList: builder.query<AnimeList, number>({
       query: (itemPage) => ({
-        url: "title/changes",
+        url: "title/updates",
         params: {
           items_per_page: itemPage,
         },
